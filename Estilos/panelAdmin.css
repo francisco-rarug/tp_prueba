@@ -280,4 +280,23 @@ button.d-flex span {
         width: 100%;
         aspect-ratio: auto;
     }
+
+    .btn-editar {
+        width: 70%; 
+        font-size: 0.5rem;
+    }
+
+    .btn-eliminar {
+        width: 70%; 
+        margin-top: 3px;
+        font-size: 0.5rem;
+    }
+
+    .content h2 {
+        font-size: 0.8rem; 
+    }
+
+    .content p {
+        font-size: 0.5rem;
+    }
 }

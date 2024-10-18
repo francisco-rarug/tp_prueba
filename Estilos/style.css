@@ -604,15 +604,14 @@ body {
 
     .btn-agregar-carrito {
         width: 70%; 
-        margin-top: 10px;
         font-size: 0.6rem;
     }
 
     .content h2 {
-        font-size: 1rem; 
+        font-size: 0.8rem; 
     }
 
     .content p {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
     }
 }
