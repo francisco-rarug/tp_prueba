@@ -101,12 +101,40 @@ button {
     cursor: pointer;
 }
 
-
 @media screen and (max-width: 700px) {
     .nav-bar {
         flex-direction: column;
         position: relative;
         background-color: #000000 !important;
+    }
+
+    .contenedor {
+        flex-direction: column; 
+        width: 90%;
+        margin: auto;
+        background-color: #24303c;
+        padding: 20px; 
+        border-radius: 10px; 
+        margin-bottom: 20px; 
+        margin-top: 20px;
+    }
+
+    .div-imagen {
+        width: 100%; 
+        
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .imagen {
+        width: 80%;
+        height: 80%; 
+    }
+
+    .form-registro {
+        width: 100%;
+        padding: 20px; 
     }
 }
 

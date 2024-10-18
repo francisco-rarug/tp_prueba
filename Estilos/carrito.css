@@ -414,6 +414,10 @@ body {
     .nav-bar .botonera {
         flex-direction: column;
     }
+
+    .buttonTitulo{
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 1000px) {
