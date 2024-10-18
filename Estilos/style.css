@@ -593,12 +593,26 @@ body {
 
 @media screen and (max-width: 600px) {
     .productos {
-        grid-template-columns: 1fr; 
-        padding: 10px; 
+        grid-template-columns: 1fr;
+        padding: 10px;
     }
 
     .card {
-        width: 100%; 
-        aspect-ratio: auto; 
+        width: 100%;
+        aspect-ratio: auto;
+    }
+
+    .btn-agregar-carrito {
+        width: 70%; 
+        margin-top: 10px;
+        font-size: 0.6rem;
+    }
+
+    .content h2 {
+        font-size: 1rem; 
+    }
+
+    .content p {
+        font-size: 0.6rem;
     }
 }
