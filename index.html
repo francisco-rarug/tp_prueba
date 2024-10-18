@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.icons8.com/fonts/line-awesome/1.3/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="/Recursos/perfil-del-usuario.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="nav-bar">
+        <div>
+            <a href="/Secciones/principal.html"><img class="logo" src="/Recursos/consola-de-juego.png" alt="logo"></a>
+        </div>
+
+        <div>
+            <a href="/Secciones/indexAdmin.html" class="d-flex align-items-center text-light">
+                <i class="bi bi-person-circle fs-3"></i>
+                <span class="ms-2">Admin</span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="contenedor">
+            <div class="div-imagen">
+                <img class="imagen" src="/Recursos/inicio6.avif" alt="Imagen" />
+            </div>
+
+            <div class="form-registro">
+                <h4 class="titulo">Formulario Registro</h4>
+                <label for="nombre">Nombre</label>
+                <input id="nombre" class="entradas" type="text" placeholder="Ingrese su nombre">
+                <label for="apellido">Apellido</label>
+                <input id="apellido" class="entradas" type="text" placeholder="Ingrese su apellido">
+
+                <div class="cont-links">
+                    <input id="login" class="links" type="submit" value="Loguearse">
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script type="module" src="/Scripts/user.js"></script>
+</body>
+
+</html>

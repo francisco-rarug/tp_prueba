@@ -1,0 +1,117 @@
+* {
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-x: hidden;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(22, 22, 48, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.nav-bar {
+    display: flex;
+    background-color: black !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    width: 100%;
+}
+
+.logo {
+    width: 4rem;
+}
+
+.contenedor {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    opacity: 0.7;
+}
+
+.div-imagen {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #24303c;
+}
+
+.imagen {
+    width: 90%;
+    height: 90%;
+    border-radius: 4px;
+}
+
+.titulo {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.entradas {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.form-registro {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    font-family: 'calibri';
+    color: white;
+}
+
+.cont-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    width: 80%;
+    background: #6e7ea0;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    margin-inline: 10px;
+    border-radius: 10px;
+}
+
+.links:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+    border-radius: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 700px) {
+    .nav-bar {
+        flex-direction: column;
+        position: relative;
+        background-color: #000000 !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 14px;
+    }
+}

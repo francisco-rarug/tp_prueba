@@ -1,0 +1,471 @@
+* {
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #1b2838;
+}
+
+.cantidad-productos {
+    width: 120px;
+}
+
+.datos {
+    color: #ddd;
+}
+
+.nav-bar {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0) !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    position: absolute;
+    width: 100%;
+}
+
+.nav-bar .botonera {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nav-bar .botonera a {
+    background-color: rgba(255, 255, 255, 0) !important;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+
+}
+
+.nav-bar .botonera a:hover {
+    color: #acd550;
+}
+
+.logo {
+    width: 4rem;
+    color: #ddd;
+}
+
+.imagen-tarjeta {
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)),
+        url('/Recursos/4k-ultra-hd-gaming-call-of-duty.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen-tarjeta h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 2px rgb(177, 172, 172);
+}
+
+.imagen-tarjeta h6 {
+    font-size: 22px;
+    font-weight: 900;
+    font-family: "Montserrat", Sans-serif;
+    color: #fff;
+}
+
+.imagen-tarjeta p {
+    font-size: 25px;
+    font-weight: 900;
+    font-family: "Montserrat", Sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 2px #66c0f4;
+}
+
+.buttonTitulo {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonTitulo {
+    --border-right: 6px;
+    --text-stroke-color: white;
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: width 0.5s ease, filter 0.5s ease;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.buttonTitulo:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+    transition: width 0.5s ease, filter 0.5s ease;
+}
+
+.icono {
+    height: 30px;
+}
+
+.barra-divisora {
+    height: 4rem;
+    background-color: #66c0f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-titulo {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.card {
+    width: 90%;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card .image-box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 90%;
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+    cursor: url("/Recursos/joystick.png"), auto;
+}
+
+.card:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.card:hover .content {
+    opacity: 1;
+}
+
+.content h2,
+.content p,
+.btn-agregar-carrito {
+    margin: 10px 0;
+}
+
+p {
+    font-size: 12px;
+}
+
+.btn-agregar-carrito {
+    background-color: #66c0f4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: url("/Recursos/joystick.png"), auto;
+
+}
+
+.btn-agregar-carrito:hover {
+    background-color: #acd550;
+    cursor: url("/Recursos/joystick.png"), auto;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.card:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.cantidad-box {
+    margin-top: 10px;
+    width: 10px;
+    padding: 5px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.pie-pagina {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(22, 22, 48, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 50px;
+    padding: 45px 0px;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box figure img {
+    width: 250px;
+}
+
+.box h2 {
+    color: #acd550;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.box p {
+    color: #66c0f4;
+    margin-bottom: 10px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.grupo-2 {
+    padding: 15px 10px;
+    text-align: center;
+    color: #0f0101;
+}
+
+.grupo-2 small {
+    font-size: 15px;
+    color: #66c0f4;
+}
+
+.mapa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1 {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .sub-titulo {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .nav-bar {
+        flex-direction: column;
+        position: relative;
+        background-color: #000000 !important;
+    }
+
+    .nav-bar .botonera {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 14px;
+    }
+
+    .imagen-tarjeta {
+        height: 70vh;
+        padding: 20px;
+        text-align: center;
+
+    }
+
+    .imagen-tarjeta p {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .pie-pagina .grupo-1 {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        padding: 20px 10px;
+    }
+
+    .box figure img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pie-pagina .grupo-1 {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .productos {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        aspect-ratio: auto;
+    }
+}
