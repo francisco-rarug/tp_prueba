@@ -38,9 +38,46 @@
             <h3 class="sub-titulo">Juegos</h3>
         </div>
 
-        <button class="d-flex align-items-center">
+        <button class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#modalAñadir">
             <i class="bi bi-patch-plus-fill fs-3"></i>
-            <span class="ms-2">Añadir nuevo juego</span></button>
+            <span class="ms-2">Añadir nuevo juego</span>
+        </button>
+
+
+        <div class="modal fade" id="modalAñadir" tabindex="-1" aria-labelledby="modalAñadirLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAñadirLabel">Añadir Nuevo Producto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formAñadir">
+                            <div class="mb-3">
+                                <label for="nombreJuego" class="form-label">Nombre del Juego</label>
+                                <input type="text" class="form-control" id="nombreJuego" name="nombreJuego" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcionJuego" class="form-label">Descripción</label>
+                                <textarea class="form-control" id="descripcionJuego" name="descripcionJuego" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="precioJuego" class="form-label">Precio</label>
+                                <input type="number" class="form-control" id="precioJuego" name="precioJuego" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="imagenJuego" class="form-label">URL de la imagen</label>
+                                <input type="text" class="form-control" id="imagenJuego" name="imagenJuego" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="guardarNuevoJuego">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <section class="productos" id="productos">
             <div class="card">
@@ -51,8 +88,8 @@
                     <h2 class="data-producto">EA FC 25</h2>
                     <p>Un juego que recrea el futbol real con datos de las mejores ligas del mundo</p>
                     <p class="data-precio">$80.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="1">Editar</button>
+                    <button class="btn-eliminar" data-id="1">Eliminar</button>
                 </div>
             </div>
 
@@ -64,8 +101,8 @@
                     <h2 class="data-producto">ARK survival ascended</h2>
                     <p>Juego de accion y aventura multijugador con mejoras graficas bajo Unreal Engine 5.</p>
                     <p class="data-precio">$35.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="2">Editar</button>
+                    <button class="btn-eliminar" data-id="2">Eliminar</button>
                 </div>
             </div>
 
@@ -77,8 +114,8 @@
                     <h2 class="data-producto">FarCry</h2>
                     <p>Juego de accion y disparos en mundo abierto con una narrativa intensa y exploracion</p>
                     <p class="data-precio">$20.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="3">Editar</button>
+                    <button class="btn-eliminar" data-id="3">Eliminar</button>
                 </div>
             </div>
 
@@ -90,8 +127,8 @@
                     <h2 class="data-producto">GTA V</h2>
                     <p>Juego de accion y mundo abierto con una ciudad dinamica y misiones variadas</p>
                     <p class="data-precio">$55.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="4">Editar</button>
+                    <button class="btn-eliminar" data-id="4">Eliminar</button>
                 </div>
             </div>
 
@@ -103,8 +140,8 @@
                     <h2 class="data-producto">Marvel Spiderman</h2>
                     <p>Juego de accion donde controlas a Spider-Man en una emocionante lucha contra el crimen</p>
                     <p class="data-precio">$76.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="5">Editar</button>
+                    <button class="btn-eliminar" data-id="5">Eliminar</button>
                 </div>
             </div>
 
@@ -114,13 +151,14 @@
                 </div>
                 <div class="content">
                     <h2 class="data-producto">Minecraft</h2>
-                    <p>Juego de construccion y aventura en un mundo abierto donde puedes crear, explorar y sobrevivir</p>
+                    <p>Juego de construccion y aventura en un mundo abierto donde puedes crear, explorar y sobrevivir
+                    </p>
                     <p class="data-precio">$14.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="6">Editar</button>
+                    <button class="btn-eliminar" data-id="6">Eliminar</button>
                 </div>
             </div>
-            
+
             <div class="card">
                 <div class="image-box">
                     <img src="/Recursos/Productos/Dbz.jpg" alt="">
@@ -129,8 +167,8 @@
                     <h2 class="data-producto">Dragon Ball Sparking zero</h2>
                     <p>Domina el poder destructivo de los luchadores más fuertes de la serie animada</p>
                     <p class="data-precio">$60.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="7">Editar</button>
+                    <button class="btn-eliminar" data-id="7">Eliminar</button>
                 </div>
             </div>
 
@@ -142,8 +180,8 @@
                     <h2 class="data-producto">Fear and hunger</h2>
                     <p>Un juego de terror ambientado en las oscuras y desesperadas masmorras</p>
                     <p class="data-precio">$5.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="8">Editar</button>
+                    <button class="btn-eliminar" data-id="8">Eliminar</button>
                 </div>
             </div>
 
@@ -155,8 +193,8 @@
                     <h2 class="data-producto">Destiny</h2>
                     <p> Un juego Looter-shooter de acción con un mundo único y dinámico multijugador</p>
                     <p class="data-precio">$10.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="9">Editar</button>
+                    <button class="btn-eliminar" data-id="9">Eliminar</button>
                 </div>
             </div>
 
@@ -166,9 +204,10 @@
             <h3 class="sub-titulo">Accesorios</h3>
         </div>
 
-        <button class="d-flex align-items-center">
+        <button class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#modalAñadir">
             <i class="bi bi-patch-plus-fill fs-3"></i>
-            <span class="ms-2">Añadir nuevo juego</span></button>
+            <span class="ms-2">Añadir nuevo accesorio</span>
+        </button>
 
         <section class="productos" id="productos">
             <div class="card">
@@ -180,8 +219,8 @@
                     <p>Un equipo de alto rendimiento con procesador de última generación, tarjeta gráfica potente y
                         capacidad para juegos en máxima calidad</p>
                     <p class="data-precio">$1.260.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="10">Editar</button>
+                    <button class="btn-eliminar" data-id="10">Eliminar</button>
                 </div>
             </div>
 
@@ -194,8 +233,8 @@
                     <p>Audio envolvente 7.1 con cancelacion de ruido y sonido de alta definicion para jugar de la mejor
                         forma.</p>
                     <p class="data-precio">$140.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="11">Editar</button>
+                    <button class="btn-eliminar" data-id="11">Eliminar</button>
                 </div>
             </div>
 
@@ -208,8 +247,8 @@
                     <p>Pantalla con alta tasa de refresco y baja latencia, con una resolucion nitida y colores
                         vibrantes.</p>
                     <p class="data-precio">$320.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="12">Editar</button>
+                    <button class="btn-eliminar" data-id="12">Eliminar</button>
                 </div>
             </div>
 
@@ -222,8 +261,8 @@
                     <p>Una consola de ultima generacion con graficos 4K, velocidad ultra rapida y una inmersion total en
                         juegos.</p>
                     <p class="data-precio">$1.000.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="13">Editar</button>
+                    <button class="btn-eliminar" data-id="13">Eliminar</button>
                 </div>
             </div>
 
@@ -236,8 +275,8 @@
                     <p>Diseñada ergonomicamente, ofrece comodidad superior durante largas sesiones de juego, con ajustes
                         para respaldar la postura.</p>
                     <p class="data-precio">$200.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="14">Editar</button>
+                    <button class="btn-eliminar" data-id="14">Eliminar</button>
                 </div>
             </div>
 
@@ -250,18 +289,52 @@
                     <p>Control inalambrico con gatillos adaptativos y un diseño intuitivo para una experiencia de juego
                         inmersiva</p>
                     <p class="data-precio">$110.000</p>
-                    <button class="btn-editar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
+                    <button class="btn-editar" data-id="15">Editar</button>
+                    <button class="btn-eliminar" data-id="15">Eliminar</button>
                 </div>
             </div>
         </section>
 
+        <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEditarLabel">Editar Producto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formEditar">
+                            <div class="mb-3">
+                                <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+                                <input type="text" class="form-control" id="nombreProducto" name="nombreProducto" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcionProducto" class="form-label">Descripción</label>
+                                <textarea class="form-control" id="descripcionProducto" name="descripcionProducto" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="precioProducto" class="form-label">Precio</label>
+                                <input type="number" class="form-control" id="precioProducto" name="precioProducto" required>
+                            </div>
+                            <input type="hidden" id="productoId" name="productoId">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="guardarCambios">Guardar cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script type="module" src="/Scripts/user.js"></script>
+    <script src="/Scripts/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
