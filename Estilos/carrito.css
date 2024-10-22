@@ -147,73 +147,77 @@ body {
     margin: 5px auto;
 }
 
+
 .btn-finalizar {
     display: block;
     margin: 20px auto;
-    padding: 10px 20px;
+    --green: #1BFD9C;
     font-size: 1.2rem;
-    color: white;
-    background-color: #4367ca;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%, transparent 60%, rgba(27, 253, 156, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
 }
 
 .btn-finalizar:hover {
-    background-color: #001e70;
-    transform: scale(1.05);
+    color: #82ffc9;
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
 }
 
-.btn-borrar {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: white;
-    background-color: #f1281e;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+.btn-finalizar:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%, rgba(27, 253, 156, 0.1) 60%, transparent 100%);
 }
 
-.btn-borrar:hover {
-    background-color: #910700;
-    transform: scale(1.05);
+.btn-finalizar:hover:before {
+    transform: translateX(15em);
 }
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
     transition: opacity 0.3s ease;
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto; 
-    padding: 20px; 
-    border: 1px solid #888; 
-    border-radius: 10px; 
-    width: 80%; 
-    max-width: 500px; 
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0; 
-    transform: scale(0.8); 
-    transition: opacity 0.3s ease, transform 0.3s ease; 
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 
 .modal.show {
-    display: block; 
-    opacity: 1; 
+    display: block;
+    opacity: 1;
 }
 
 .modal-content.show {
@@ -222,49 +226,50 @@ body {
 }
 
 .close {
-    color: #aaa; 
-    float: right; 
+    color: #aaa;
+    float: right;
     font-size: 28px;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
     color: black;
-    text-decoration: none; 
-    cursor: pointer; 
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .no-scroll {
     overflow: hidden;
-    height: 100vh; 
+    height: 100vh;
 }
 
 
 #productos-lista {
     list-style-type: none;
-    padding: 0; 
+    padding: 0;
 }
 
 #productos-lista li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px; 
-    background-color: white; 
-    border-radius: 10px; 
-    margin-bottom: 10px; 
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #productos-lista img {
-    margin-right: 15px; 
-    width: 50px; 
-    height: 50px; 
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
     border-radius: 5px;
 }
 
-#lista-productos-finalizar, #productos-lista hr {
+#lista-productos-finalizar,
+#productos-lista hr {
     border: none;
     border-top: 2px solid #ccc;
     margin: 10px 0;
@@ -277,7 +282,7 @@ body {
     margin-top: 10px;
 }
 
-#productos-lista p{
+#productos-lista p {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
@@ -286,18 +291,18 @@ body {
 }
 
 .bin-button {
-    margin-left: auto; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    width: 45px; 
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
     height: 45px;
-    border-radius: 10px; 
-    background-color: rgb(255, 95, 95); 
-    cursor: pointer; 
+    border-radius: 10px;
+    background-color: rgb(255, 95, 95);
+    cursor: pointer;
     border: 3px solid rgb(255, 201, 201);
-    transition-duration: 0.3s; 
+    transition-duration: 0.3s;
 }
 
 .bin-bottom {
@@ -306,8 +311,8 @@ body {
 
 .bin-top {
     width: 17px;
-    transform-origin: right; 
-    transition-duration: 0.3s; 
+    transform-origin: right;
+    transition-duration: 0.3s;
 }
 
 .bin-button:hover {
@@ -403,6 +408,12 @@ body {
     align-items: center;
 }
 
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 700px) {
 
     .nav-bar {
@@ -415,7 +426,7 @@ body {
         flex-direction: column;
     }
 
-    .buttonTitulo{
+    .buttonTitulo {
         font-size: 1.5rem;
     }
 }
@@ -450,7 +461,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .btn-finalizar, .btn-borrar {
+
+    .btn-finalizar,
+    .btn-borrar {
         width: 100%;
         font-size: 1rem;
         padding: 8px;

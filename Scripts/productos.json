@@ -1,0 +1,76 @@
+{
+    "productos": [
+        {
+            "nombre": "EA FC 25",
+            "descripcion": "Un juego que recrea el futbol real con datos de las mejores ligas del mundo",
+            "precio": 80000,
+            "imagen": "/Recursos/productos/Ea25.jpg"
+        },
+        {
+            "nombre": "ARK survival ascended",
+            "descripcion": "Juego de accion y aventura multijugador con mejoras graficas bajo Unreal Engine 5.",
+            "precio": 35000,
+            "imagen": "/Recursos/productos/Ark.jpg"
+        },
+        {
+            "nombre": "FarCry",
+            "descripcion": "Juego de accion y disparos en mundo abierto con una narrativa intensa y exploracion",
+            "precio": 20000,
+            "imagen": "/Recursos/productos/far-cry.jfif"
+        },
+        {
+            "nombre": "GTA V",
+            "descripcion": "Juego de accion y mundo abierto con una ciudad dinamica y misiones variadas",
+            "precio": 55000,
+            "imagen": "/Recursos/productos/GTA.webp"
+        },
+        {
+            "nombre": "Marvel Spiderman",
+            "descripcion": "Juego de accion donde controlas a Spider-Man en una emocionante lucha contra el crimen",
+            "precio": 76000,
+            "imagen": "/Recursos/productos/marvel-spiderman.webp"
+        },
+        {
+            "nombre": "Minecraft",
+            "descripcion": "Juego de construccion y aventura en un mundo abierto donde puedes crear, explorar y sobrevivir",
+            "precio": 14000,
+            "imagen": "/Recursos/productos/minecraft.jpg"
+        },
+        {
+            "nombre": "Pc gamer",
+            "descripcion": "Un equipo de alto rendimiento con procesador de última generación, tarjeta gráfica potente y capacidad para juegos en máxima calidad",
+            "precio": 1260000,
+            "imagen": "/Recursos/Productos/pc.webp"
+        },
+        {
+            "nombre": "Auriculares Gamer",
+            "descripcion": "Audio envolvente 7.1 con cancelacion de ruido y sonido de alta definicion para jugar de la mejor forma.",
+            "precio": 140000,
+            "imagen": "/Recursos/Productos/auriculares.jpg"
+        },
+        {
+            "nombre": "Monitor",
+            "descripcion": "Pantalla con alta tasa de refresco y baja latencia, con una resolucion nitida y colores vibrantes.",
+            "precio": 320000,
+            "imagen": "/Recursos/Productos/monitor.jpg"
+        },
+        {
+            "nombre": "PS5",
+            "descripcion": "Una consola de ultima generacion con graficos 4K, velocidad ultra rapida y una inmersion total en juegos.",
+            "precio": 1000000,
+            "imagen": "/Recursos/Productos/ps5.webp"
+        },
+        {
+            "nombre": "Silla gamer",
+            "descripcion": "Diseñada ergonomicamente, ofrece comodidad superior durante largas sesiones de juego, con ajustes para respaldar la postura.",
+            "precio": 200000,
+            "imagen": "/Recursos/Productos/Silla.jpg"
+        },
+        {
+            "nombre": "Joystick PS5",
+            "descripcion": "Control inalambrico con gatillos adaptativos y un diseño intuitivo para una experiencia de juego inmersiva",
+            "precio": 110000,
+            "imagen": "/Recursos/Productos/joystick-playstation-ps5.jpg"
+        }
+    ]
+}

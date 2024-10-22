@@ -31,7 +31,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    opacity: 0.7;
 }
 
 .div-imagen {
@@ -109,37 +108,41 @@ button {
     }
 
     .contenedor {
-        flex-direction: column; 
+        flex-direction: column;
         width: 90%;
         margin: auto;
         background-color: #24303c;
-        padding: 20px; 
-        border-radius: 10px; 
-        margin-bottom: 20px; 
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
         margin-top: 20px;
     }
 
     .div-imagen {
-        width: 100%; 
-        
-        display: flex; 
-        justify-content: center; 
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
 
     .imagen {
         width: 80%;
-        height: 80%; 
+        height: 80%;
     }
 
     .form-registro {
         width: 100%;
-        padding: 20px; 
+        padding: 20px;
     }
 }
 
 @media screen and (max-width: 650px) {
     body {
         font-size: 14px;
+    }
+
+    .titulo {
+        font-size: 20px;
     }
 }
